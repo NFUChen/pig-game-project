@@ -72,13 +72,10 @@ class PigGame {
   }
 
   switchPlayer() {
-    if (this.activePlayerIdx == this.numberOfPlayers - 1) {
-      this.activePlayerIdx = 0;
-    } else {
-      this.activePlayerIdx += 1;
-    }
-    // this.activePlayer =
-    //   this.activePlayer === this.players[0] ? this.players[1] : this.players[0];
+     this.activePlayerIdx =
+      this.activePlayerIdx === this.numberOfPlayers - 1
+        ? (this.activePlayerIdx = 0)
+        : (this.activePlayerIdx += 1);
   }
 
   // handling HTML
